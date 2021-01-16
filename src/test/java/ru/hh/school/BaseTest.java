@@ -18,7 +18,7 @@ public abstract class BaseTest {
 
   @BeforeClass
   public static void setupSessionFactory() throws IOException {
-    pg = EmbeddedPostgres.builder().setPort(5433).start();
+    pg = EmbeddedPostgres.builder().setPort(5431).start();
     sessionFactory = DbFactory.createSessionFactory();
   }
 

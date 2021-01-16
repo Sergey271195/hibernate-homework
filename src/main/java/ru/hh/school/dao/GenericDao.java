@@ -28,6 +28,10 @@ public class GenericDao {
     getSession().save(object);
   }
 
+  public <T> T merge(Object object) { return (T) getSession().merge(object); }
+
+  public void update(Object object) { getSession().update(object); }
+
   protected Session getSession() {
     return sessionFactory.getCurrentSession();
   }
